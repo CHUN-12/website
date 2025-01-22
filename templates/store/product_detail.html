@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
+        </div>
+        <div class="col-md-6">
+            <h1>{{ product.name }}</h1>
+            <p class="text-danger h3">NT$ {{ product.price }}</p>
+            <p class="text-muted">庫存: {{ product.stock }} 件</p>
+            <hr>
+            <h4>商品描述</h4>
+            <p>{{ product.description }}</p>
+            <div class="mt-4">
+                <button class="btn btn-primary btn-lg">加入購物車</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
